@@ -1,0 +1,54 @@
+{
+  "train_config": {
+    "targets": ["目标1", "目标2"],
+    "test_size": 0.2,
+    "random_seed": 100,
+    "remove_outliers": true,
+    "outlier_std_threshold": 2.0,
+    "model_type": "custom",
+    "model_list_custom": ["ridge", "xgb"],
+    "reduction_type": "custom",
+    "reduction_list_custom": ["none", "svd"],
+    "n_iterations": 3,
+    "n_folds": 4,
+    "n_jobs": 4
+  },
+  "features": {
+    "SAMPLE-001": {
+      "前部分": {
+        "温度": 120,
+        "压力": 2.5
+      },
+      "后部分": {
+        "特征A": 0.12,
+        "特征B": 0.34
+      }
+    },
+    "SAMPLE-002": {
+      "前部分": {
+        "温度": 125,
+        "压力": 2.3
+      }
+    },
+    "SAMPLE-003": {
+      "后部分": {
+        "特征A": 0.15,
+        "特征B": 0.31
+      }
+    }
+  },
+  "targets": {
+    "SAMPLE-001": {
+      "目标1": 10.2,
+      "目标2": null
+    },
+    "SAMPLE-002": {
+      "目标1": null,
+      "目标2": 8.7
+    },
+    "SAMPLE-003": {
+      "目标1": 11.1,
+      "目标2": 9.2
+    }
+  }
+}
